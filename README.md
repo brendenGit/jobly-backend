@@ -34,21 +34,68 @@ Jobly Backend is the server-side component of the Jobly application, responsible
 
 ## API Endpoints
 
-- **Authentication**:
-  - `/auth/register`: Register a new user.
-  - `/auth/login`: Log in an existing user.
+### Authentication
 
-- **Users**:
-  - `/users/:username`: Get user details.
-  - `/users/:username/jobs/:id`: Apply for a job.
+- #### POST /auth/token
+  - Returns a JWT token for authentication.
 
-- **Companies**:
-  - `/companies`: Get all companies.
-  - `/companies/:handle`: Get company details.
+- #### POST /auth/register
+  - Registers a new user.
 
-- **Jobs**:
-  - `/jobs`: Get all jobs.
-  - `/jobs/:id`: Get job details.
+### Companies
+
+- #### POST /companies
+  - Adds a new company.
+
+- #### GET /companies
+  - Returns a list of all companies.
+
+- #### GET /companies/:handle
+  - Returns details of a specific company.
+
+- #### PATCH /companies/:handle
+  - Updates details of a specific company.
+
+- #### DELETE /companies/:handle
+  - Deletes a specific company.
+
+### Jobs
+
+- #### POST /jobs
+  - Adds a new job.
+
+- #### GET /jobs
+  - Returns a list of all jobs.
+
+- #### GET /jobs/:id
+  - Returns details of a specific job.
+
+- #### PATCH /jobs/:id
+  - Updates details of a specific job.
+
+- #### DELETE /jobs/:id
+  - Deletes a specific job.
+
+### Users
+
+- #### POST /users
+  - Adds a new user.
+
+- #### GET /users
+  - Returns a list of all users.
+
+- #### GET /users/:username
+  - Returns details of a specific user.
+
+- #### PATCH /users/:username
+  - Updates details of a specific user.
+
+- #### DELETE /users/:username
+  - Deletes a specific user.
+
+- #### POST /users/:username/jobs/:id
+  - Applies for a job.
+
 
 ## Contributing
 
